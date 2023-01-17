@@ -12,7 +12,6 @@ def data_cleaning(df: pd.DataFrame) -> pd.DataFrame:
     df = df.apply(lambda x: x.str.lower() if x.dtype == "object" else x)
     df = df.dropna()
     for column in df.columns:
-        df[column] = df[column].str.replace(r'\W', '', regex=True)
-    for column in df.columns:
-        df[column] = df[df[column].str.strip().astype(bool)] 
+        df[column] = df[column].replace(r'\W', '', regex=True)
+    df.columns = df.columns.str.strip()
     return df
