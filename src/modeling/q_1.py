@@ -24,3 +24,9 @@ def get_students_career():
     df.groupby(['titulo']).size().plot(kind='bar', subplots=True)
     plt.title('Carrera de estudiantes que conocen el EIU')
     plt.show()
+
+def answer():
+    get_students_EIU()
+    get_students_gender()
+    get_students_semester()
+    get_students_career()
