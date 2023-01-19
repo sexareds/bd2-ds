@@ -9,3 +9,5 @@ def get_qualities() -> None:
     df = ct.get_table(sql_script)
     df = ct.data_cleaning(df)
     return df
+
+# add more functions as needed
