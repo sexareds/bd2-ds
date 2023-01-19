@@ -5,6 +5,6 @@ import pandas as pd
 from thefuzz import fuzz, process
 
 if __name__ == '__main__':
-    # q_1.answer()
-    # q_2.get_qualities()
+    q_1.answer()
+    q_2.get_qualities()
     q_3.get_answer()
