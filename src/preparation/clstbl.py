@@ -8,6 +8,8 @@ def get_table(sql_script: str) -> pd.DataFrame:
     df = pd.DataFrame.from_records(data=query.fetchall(), columns=cols)
     return df
 
+# TO DO: Add NaN values
+
 def data_cleaning(df: pd.DataFrame) -> pd.DataFrame:
     df = df.apply(lambda x: x.str.lower() if x.dtype == "object" else x)
     df = df.dropna()
