@@ -1,10 +1,10 @@
-import modeling.q_1 as q_1
-import modeling.q_2 as q_2
-import modeling.q_3 as q_3
+import modeling.model1 as m1
+import modeling.model2 as m2
+import modeling.model3 as m3
 import pandas as pd
 from thefuzz import fuzz, process
 
 if __name__ == '__main__':
-    q_1.answer()
-    q_2.get_qualities()
-    q_3.get_answer()
+    # m1.answer()
+    m2.get_answer()
+    # m3.get_answer()
