@@ -4,6 +4,6 @@ import modeling.model3 as m3
 from thefuzz import fuzz, process
 
 if __name__ == '__main__':
-    m1.get_answer()
-    m2.get_answer()
+    # m1.get_answer()
+    # m2.get_answer()
     m3.get_answer()
