@@ -4,7 +4,7 @@ import processing.process1 as p1
 def get_students_EIU():
     df = p1.get_students_EIU()
     if df.empty: return
-    df.groupby(['Respuesta']).size().plot(kind='bar', subplots=True)
+    df.groupby(['Respuesta']).size().plot(kind='pie', subplots=True, autopct='%1.1f%%')
     plt.title('Estudiantes que conocen el EIU')
     plt.show()
 
