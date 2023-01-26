@@ -3,6 +3,7 @@ import processing.process3 as p3
 
 def get_top_students():
     df = p3.get_top_students()
+    if df.empty: return
     df['votos'].plot(kind='bar')
     plt.title('Top 15 estudiantes')
     plt.xlabel('Estudiantes')
@@ -11,12 +12,14 @@ def get_top_students():
 
 def get_students_semester():
     df = p3.get_students_semester()
+    if df.empty: return
     df.groupby(['titulo']).size().plot(kind='bar', subplots=True)
     plt.title('Semestre de estudiantes que votaron')
     plt.show()
 
 def get_students_career():
     df = p3.get_students_career()
+    if df.empty: return
     df.groupby(['titulo']).size().plot(kind='bar', subplots=True)
     plt.title('Carrera de estudiantes que votaron')
     plt.show()
