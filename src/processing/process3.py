@@ -14,5 +14,5 @@ def get_students_semester():
 
 def get_students_career():
     df = ct.get_table(q3.get_students_career)
-    df = ct.data_cleaning(df)
+    # df = ct.data_cleaning(df)
     return df
